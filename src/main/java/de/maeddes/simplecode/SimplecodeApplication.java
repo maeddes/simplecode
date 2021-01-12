@@ -2,7 +2,6 @@ package de.maeddes.simplecode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.apache.commons.logging.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,7 +35,7 @@ public class SimplecodeApplication {
 	String hello(){
 
 		logger.info("Call to hello method on instance: " + getInstanceId());
-		return getInstanceId()+" Hello, cf-for-k8s ! ";
+		return getInstanceId()+" Hello, Tokyo ! ";
 
 	}
 
