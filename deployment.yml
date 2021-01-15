@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: simplecode
+  name: simplecode
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simplecode
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: simplecode
+    spec:
+      containers:
+      - image: maeddes/simplecode:v1
+        name: simplecode
+        livenessProbe:
+          httpGet:
+            path: /hello
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 3
+
